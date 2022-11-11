@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>
+        ES3
+    </title>
+</head>
+
+<body>
+    <p>inserire un valore,se è = a quello inserito dal pc stampa hai indovinato, massimo 100</p>
+    <form name="n">
+        <input type='text' name='nome' />
+    </form>
+    <button onclick=indovinato()>Invio </button>
+    <p id="Risultato">Risultato</p>
+</body>
+<script>
+    var numero = Math.floor(Math.random() * 100);
+    function indovinato() {
+        var n = document.forms["n"]["nome"].value;
+        console.log(numero);
+        if (numero == n) {
+            document.getElementById("Risultato").innerHTML = "hai indovinato : " + numero;
+        } else {
+            if (n > numero) {
+                document.getElementById("Risultato").innerHTML = "il numero è sbagliato inserirne uno più basso: " + n;
+            } else {
+                document.getElementById("Risultato").innerHTML = "il numero è sbagliato inserirne uno più alto: " + n;
+            }
+
+        }
+
+    }
+</script>
+
+</html>

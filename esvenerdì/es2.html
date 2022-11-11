@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>
+        ES2
+    </title>
+</head>
+
+<body>
+    <p>inserire frase contenete parola scuola che verrà cambiata con lavoro</p>
+    <form name="n">
+        <input type='text' name='nome' />
+    </form>
+    <button onclick=sostituisci()>Invio </button>
+    <p id="Risultato">Risultato</p>
+</body>
+<script>
+    function sostituisci() {
+        var frase = document.forms["n"]["nome"].value;
+        var risultato = frase.replace('scuola', 'lavoro');
+        document.getElementById("Risultato").innerHTML = "Risultato :" + risultato;
+    }
+</script>
+
+</html>

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>ES4</title>
+</head>
+
+<body>
+    <h1>ES4</h1>
+    <p id="casuale"></p>
+    <button onclick="genera()">
+        genera numero
+    </button>
+    <button onclick="ordina()">
+        ordina array
+    </button>
+    <script>
+        //la math. random il risultato me lo inserisce nell'emento con id = casuale
+        // (solo 1)-->document.getElementById("casuale").innerHTML = Math.floor(Math.random() * 10); //il floor crea numeri interi
+        var numeri = [];
+        function genera() {
+            //crea numero casuale senza ripetizioni e lo inserisco nell'array quando preme il pulsante 
+            var a = Math.floor(Math.random() * 10);
+            controllo = false;
+            for (var i = 0; i < numeri.leght; i++) {
+                if (a === numeri[i]) {
+                    controllo = true;
+                }
+            }
+            if (controllo === false) {
+                numeri.push(a);
+            }
+            document.getElementById("casuale").innerHTML = numeri;
+        }
+        function ordina() {
+            
+           numeri.sort();
+            document.getElementById("casuale").innerHTML = numeri;
+        }
+
+    </script>
+</body>
+
+</html>

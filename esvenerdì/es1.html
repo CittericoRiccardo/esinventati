@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>
+        ES1
+    </title>
+</head>
+
+<body>
+    <p id="casuale"></p>
+    <p id="max"></p>
+    <p id="min"></p>
+</body>
+<script>
+    var numeri = [];
+    for (var i = 0; i < 10; i++) {
+        numeri[i] = Math.floor(Math.random() * 1000);
+    }
+    document.getElementById("casuale").innerHTML = numeri;
+    var max = 0;
+    var min = 1000;
+    for (var i = 0; i < numeri.length; i++) {
+        if (max < numeri[i]) {
+            max = numeri[i];
+        }
+        if (min > numeri[i]) {
+            min = numeri[i];
+        }
+        console.log(max);
+    }
+    document.getElementById("max").innerText = "massimo:" + max;
+    document.getElementById("min").innerText = "minimo:" + min;
+</script>
+
+</html>
